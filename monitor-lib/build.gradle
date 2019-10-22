@@ -1,0 +1,28 @@
+apply plugin: 'java-library'
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly 'com.google.android:android:4.1.1.4'
+    compileOnly 'de.robv.android.xposed:api:82'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+group 'com.virjar'
+version '1.2.0'
+
+
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    [compileJava]*.options*.encoding = 'UTF-8'
+}
+
+compileTestJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    [compileTestJava]*.options*.encoding = 'UTF-8'
+}
